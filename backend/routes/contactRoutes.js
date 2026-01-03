@@ -7,8 +7,6 @@ router.post('/create', createContacts);
 
 router.get('/', allContacts);
 
-router.get('/search', searchContacts);
-
 router.put('/:id',updateContact);
 
 router.delete('/:id',deleteContact);

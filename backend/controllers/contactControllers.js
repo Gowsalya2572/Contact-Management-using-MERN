@@ -23,31 +23,6 @@ res.status(500).json({ message: 'Failed to fetch contacts', error: err.message }
 }
 };
 
-export const searchContacts = async (req, res) => {
-  try {
-    const { search } = req.query;
-
-    let filter = {};
-    if (search) {
-      filter = {
-        $or: [
-          { name: { $regex: search, $options: "i" } },
-          { email: { $regex: search, $options: "i" } },
-          { phone: { $regex: search, $options: "i" } },
-        ],
-      };
-    }
-
-    const contacts = await Contact.find(filter).sort({ createdAt: -1 });
-
-    res.status(200).json(contacts);
-  } catch (err) {
-    res.status(500).json({
-      message: "Search failed",
-      error: err.message,
-    });
-  }
-};
 
 export const updateContact =async (req, res) => {
 try {
