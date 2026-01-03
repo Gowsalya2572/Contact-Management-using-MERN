@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:7000/api/contacts';
+const API_URL = 'https://contact-management-backend-ten.vercel.app/api/contacts';
 
 const api = axios.create({
   baseURL: API_URL,
