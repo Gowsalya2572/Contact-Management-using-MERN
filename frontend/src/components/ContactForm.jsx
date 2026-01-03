@@ -84,7 +84,7 @@ const ContactForm = ({ onContactAdded }) => {
     <div>
       <input
         name="name"
-        placeholder="Your Name"
+        placeholder="Name"
         value={form.name}
         onChange={handleChange}
         className="w-full border border-gray-300 rounded-lg px-4 py-2 
@@ -99,7 +99,7 @@ const ContactForm = ({ onContactAdded }) => {
     <div>
       <input
         name="email"
-        placeholder="Your Email"
+        placeholder="Email"
         value={form.email}
         onChange={handleChange}
         className="w-full border border-gray-300 rounded-lg px-4 py-2 
@@ -129,7 +129,7 @@ const ContactForm = ({ onContactAdded }) => {
     <div>
       <textarea
         name="message"
-        placeholder="Your Message (optional)"
+        placeholder="Message (optional)"
         value={form.message}
         onChange={handleChange}
         rows="4"

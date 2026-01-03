@@ -1,24 +1,38 @@
-import express from 'express';
-import cors from 'cors';
-import { connectDB } from './lib/db.js';
-import dotenv from 'dotenv';
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 import contactRoutes from "./routes/contactRoutes.js";
+import { connectDB } from "./lib/db.js";
 
 dotenv.config();
-const app =express();
-const PORT=process.env.PORT;
+
+const app = express();
+
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // allow all (safe for demo)
+  })
+);
 
 
-app.use('/api', contactRoutes);
+app.use("/api/contacts", contactRoutes);
 
-app.get('/health',(req,res)=>{
-   res.send("<h2>Backend running Successfully</h2>")
-})
+app.get("/health", (req, res) => {
+  res.send("Backend running successfully");
+});
 
-app.listen(PORT,()=>{
-    console.log("server running port is", PORT);
-    connectDB();
-})
+
+connectDB();
+
+
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 7000;
+  app.listen(PORT, () => {
+    console.log("Server running on port", PORT);
+  });
+}
+
+
+export default app;

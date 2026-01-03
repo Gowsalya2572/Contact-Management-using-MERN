@@ -25,7 +25,7 @@ const ContactList = ({ contacts, onDelete, onEdit }) => {
             key={contact._id}
             contact={contact}
             onDelete={onDelete}
-             onEdit={onEdit}
+            onEdit={onEdit}
           />
         ))}
       </tbody>

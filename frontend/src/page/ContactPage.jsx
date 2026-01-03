@@ -6,8 +6,6 @@ import ContactList from "../components/ContactList";
 const ContactPage = () => {
   const [contacts, setContacts] = useState([]);
 
-
-
   useEffect(() => {
     fetchContacts();
   }, []);
