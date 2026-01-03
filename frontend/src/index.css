@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  color: green;
+}
