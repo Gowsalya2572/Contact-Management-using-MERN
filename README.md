@@ -25,7 +25,6 @@ Features
 * Store contacts in MongoDB
 * Fetch and display contacts without page reload
 * Delete/Edit contact
-* Basic sorting by latest contacts
 * Responsive UI using Tailwind CSS
 
 Deploy Link - https://contact-management-using-mern.vercel.app
