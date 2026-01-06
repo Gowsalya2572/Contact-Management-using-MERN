@@ -20,8 +20,8 @@ Backend
 
 Features
 
-Add new contacts using a form
-Client-side form validation
+.Add new contacts using a form
+.Client-side form validation
 Store contacts in MongoDB
 Fetch and display contacts without page reload
 Delete/Edit contact
